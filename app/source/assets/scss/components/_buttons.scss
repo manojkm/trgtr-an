@@ -17,18 +17,16 @@ button, .button {
 .btn {
   @extend %button;
   /* Beta 3 Migration changes */
-  #{$a-tags},
-  &:focus,
-  &.focus {
-    @include opacity(1);
+  #{$hover-focus-tags},
+  #{$active-tags},
+  .show > &.dropdown-toggle,
+  .show > &.dropdown-toggle:focus,
+  .show > &.dropdown-toggle:hover,
+  .open > &.dropdown-toggle{
     outline: 0;
     box-shadow: none;
   }
 
-  .open > &.dropdown-toggle {
-    box-shadow: none;
-    outline: 0;
-  }
 
   &.btn-icon {
     min-width: $btn-icon-size;
@@ -65,6 +63,17 @@ button, .button {
         font-size: $btn-icon-font-size-lg;
       }
     }
+
+    &.btn-xl {
+      min-width: $btn-icon-size-xl;
+      width: $btn-icon-size-xl;
+      min-height: $btn-icon-size-xl;
+
+      #{$icon-tags} {
+        font-size: $btn-icon-font-size-xl;
+      }
+    }
+
 
     &.has-dropdown {
       width: auto;
@@ -121,17 +130,20 @@ and disabled options for all buttons.
 }
 
 /* Social button */
+
 @each $scheme, $value in $social-colors {
   $tone-hover: darken($value, 6%);
+  $tone-active: darken($value, 10%);
   .btn-#{$scheme} {
-    @include btn-social-theme($value, $tone-hover, $white-color);
+    @include btn-social-theme($value, $tone-hover,$tone-active, $white-color);
   }
 }
 
 @each $scheme, $value in $social-colors {
   $tone-hover: darken($value, 6%);
+  $tone-active: darken($value, 10%);
   .btn-outline-#{$scheme} {
-    @include btn-social-theme($value, $tone-hover, $white-color, outline);
+    @include btn-social-theme($value, $tone-hover, $tone-active, $white-color, outline);
   }
 }
 
@@ -147,6 +159,22 @@ fieldset[disabled] a.btn,
 
 .btn-link {
   border: 0;
+  background-color: transparent!important;
+  #{$hover-focus-tags},
+  #{$active-tags},
+  .show > &.dropdown-toggle,
+  .show > &.dropdown-toggle:focus,
+  .show > &.dropdown-toggle:hover,
+  .open > &.dropdown-toggle{
+    text-decoration: none;
+    box-shadow: none;
+  }
+
+}
+
+/* Extra Large button */
+.btn-xl {
+  @include btn-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-min-width-xl, $btn-min-height-xl, $btn-font-size-xl, $btn-radius-xl, $btn-line-height-xl);
 }
 
 /* Large button */
@@ -171,6 +199,11 @@ fieldset[disabled] a.btn,
   &:hover{
     bottom: $btn-raised-box-shadow-y-offset-hover - $btn-raised-box-shadow-y-offset;
   }
+  .show > &.dropdown-toggle,
+  .show > &.dropdown-toggle:focus,
+  .show > &.dropdown-toggle:hover,
+  .open > &.dropdown-toggle,
+  &:active,
   &:active,
   &.active{
     box-shadow: none!important;

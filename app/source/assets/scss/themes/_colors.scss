@@ -26,9 +26,7 @@ $grey-dark:       lighten($black-color, 20%); // #333
 $grey-x-dark:     lighten($black-color, 13.5%); // #222
 $grey-xx-dark:    lighten($black-color, 6.67%); // #111
 
-
 /* From shards */
-
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -66,6 +64,13 @@ $mauve: 	#76608a;
 $sienna: 	#a0522d;
 
 //----------------------------------*\
+// CUSTOM THEME COLOR PALETTE
+//----------------------------------*/
+$yellow-custom:#FFE164;
+$pink-custom:#F05F5A;
+$dark-blue-custom:#1E3746;
+
+//----------------------------------*\
 // CONTEXTUAL COLOR PALETTE
 //----------------------------------*/
 /* List of color variables that arent in theme colors */
@@ -73,7 +78,7 @@ $sienna: 	#a0522d;
 $grass:                 #17C671 !default; // Success
 $grapefruit:            #DA4453 !default; // Danger
 $sunflower:             #F6BB42 !default; // Warning
-$aqua:                  #3BAFDA !default; // Info
+$aqua:                  #237DA0 !default; // Info
 $light:                 $gray-200 !default; // Light
 $dark:                  $gray-800 !default; // Dark
 

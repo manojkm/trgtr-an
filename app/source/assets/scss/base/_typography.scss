@@ -32,7 +32,6 @@ body {
   //@include font-size(16px);
 }
 
-
 * {
   /* Antialiasing mode font rendering */
   -webkit-font-smoothing: antialiased;
@@ -59,3 +58,71 @@ code {
   overflow: hidden;
 }
 
+mark {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+  color: inherit;
+
+  &:after {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: $mark-underline-height;
+    content: "";
+    display: block;
+    bottom: -$mark-underline-height * 2;
+  }
+}
+
+/* Theme variations */
+.mark-primary {
+  &:after {
+    @include background-color('primary', 'base');
+  }
+}
+.mark-secondary {
+  &:after {
+    @include background-color('secondary', 'base');
+  }
+}
+/* Contextual variations */
+@each $scheme, $value in $contextual {
+  .mark-#{$scheme} {
+    &:after {
+      background-color: contextual-color($scheme, 'base');
+    }
+  }
+}
+
+/* Extra small mark */
+.mark-sm {
+  &:after {
+    height: $mark-underline-height-xs;
+    bottom: -$mark-underline-height-xs * 2;
+  }
+}
+
+/* Small mark */
+.mark-sm {
+  &:after {
+    height: $mark-underline-height-sm;
+    bottom: -$mark-underline-height-sm * 2;
+  }
+}
+
+/* Large mark  */
+.mark-lg {
+  &:after {
+    height: $mark-underline-height-lg;
+    bottom: -$mark-underline-height-lg * 2;
+  }
+}
+
+/* Extra large mark  */
+.mark-xl {
+  &:after {
+    height: $mark-underline-height-xl;
+    bottom: -$mark-underline-height-xl * 2;
+  }
+}

@@ -8,7 +8,6 @@
 // Author URL: http://www.themeforest.net/user/xxx
 // ================================================================================================
 
-//TODO: Fix the lineheight and padding properly
 
 .master-header__navbar {
   position: relative;
@@ -22,8 +21,8 @@
   .navbar-text {
     @include color('header', 'font-color');
     @include opacity(0.8);
-    @include font-size($navbar-text-font-size);
-    //min-height: $header-height;
+    font-size: $navbar-text-font-size;
+
     /* Flexbox */
     display: flex;
     align-items: center;
@@ -33,115 +32,79 @@
     /* Flexbox */
     display: flex;
     align-items: stretch;
+  }
+  .nav-item {
+    position: relative;
+    text-align: center;
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
 
-    .nav-item {
-      position: relative;
-      text-align: center;
-      /* Flexbox */
-      display: flex;
-      //align-items: center;
-      flex-direction: column;
-
-      @include max-screen($screen-md-max) {
-        @if bool($navbar-item-mobile-bottom-border) == true {
-          @include border-bottom-color('header', 'light');
-          border-bottom: 1px solid;
-        } @else {
-          border-bottom: 0
-        }
-      }
-
-      &:last-of-type{
+    @include max-screen($screen-md-max) {
+      @if bool($navbar-item-mobile-bottom-border) == true {
+        @include border-bottom-color('header', 'light');
+        border-bottom: 1px solid;
+      } @else {
         border-bottom: 0
       }
+    }
 
-      /* Navbar menu links */
-      .nav-link {
-        @include color('header', 'link-color');
-        @include font-size($navbar-font-size);
-        @include transition;
-        position: relative;
-        //padding: $navlink-padding-y $navlink-padding-x;
-        background-color: transparent;
-        //min-height: $navbar-link-height;
-        text-align: center;
-        /* Flexbox */
-        display: flex;
-        align-items: center;
-        flex: 1;
-        justify-content: center;
-        min-width: 50px;
+    &:last-of-type{
+      border-bottom: 0
+    }
 
-        @include max-screen($screen-md-max) {
-          min-height: $navbar-link-md-height;
-          text-align: left;
-          justify-content: flex-start;
-        }
-
-        &.disabled {
-          @include opacity(0.3);
-          cursor: not-allowed;
-        }
-
-        /* Change the hover, focus, active state links for better highlighting */
-        &:focus,
-        &:active,
-        &:hover {
-          @include background-color('header', 'light');
-          //background-color: transparent;
-          @include color('header', 'hover-color');
-          &.disabled {
-            @include opacity(0.3);
-            background-color: transparent;
-          }
-        }
-
-        /* Navbar menu notification badge */
-        .badge {
-         /* position: absolute;
-          right: 0.33rem;
-          margin-top: -0.33rem;*/
-          left: auto;
-          top:0;
-          right: 0.33rem;
-          @include max-screen($screen-md-max) {
-            margin-top: 0;
-            right: 1em;
-          }
-
-          animation-name: scaleCount;
-          animation-iteration-count: 1;
-          animation-timing-function: all;
-          animation-duration: 1s;
-          animation-delay: 0s;
-
-          @keyframes scaleCount {
-            0% {
-              transform: scale(0);
-            }
-            40% {
-              transform: scale(1);
-            }
-            60% {
-              transform: scale(.5);
-            }
-            80% {
-              transform: scale(1.25);
-            }
-          }
-
-        }
-      }
-
-      /* Change the color of open, show, active links for better highlighting */
-      &.open > .nav-link,
-      &.show > .nav-link,
-      &.active > .nav-link {
-        @include background-color('header', 'light');
-        @include color('header', 'active-color');
-      }
+    /* Change the color of open, show, active links for better highlighting */
+    &.open > .nav-link,
+    &.show > .nav-link,
+    &.active > .nav-link {
+      @include background-color('header', 'light');
+      @include color('header', 'active-color');
     }
   }
+
+  /* Navbar menu links */
+  .nav-link {
+    @include color('header', 'link-color');
+    @include transition;
+    font-size:$navbar-font-size;
+    font-weight: $navbar-font-weight;
+    position: relative;
+    //padding: $navlink-padding-y $navlink-padding-x;
+    background-color: transparent;
+    //min-height: $navbar-link-height;
+    text-align: center;
+    /* Flexbox */
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    min-width: 50px;
+
+    @include max-screen($screen-md-max) {
+      min-height: $navbar-link-md-height;
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+    &.disabled {
+      @include opacity(0.3);
+      cursor: not-allowed;
+    }
+
+    /* Change the hover, focus, active state links for better highlighting */
+
+    #{$hover-tags} {
+      @include color('header', 'hover-color');
+      //@include background-color('header', 'light');
+    }
+
+    #{$focus-tags},
+    #{$active-tags} {
+      //@include background-color('header', 'light');
+      @include color('header', 'active-color');
+    }
+  }
+
 }
 
 @include max-screen($screen-md-max) {

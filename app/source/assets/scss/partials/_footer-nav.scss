@@ -1,0 +1,31 @@
+// ================================================================================================
+// File Name: footer-nav.scss
+// Description:
+// ----------------------------------------------------------------------------------------------
+// Item Name: xxx - Responsive Admin Theme
+// Version: 1.2
+// Author: MANOJ
+// Author URL: http://www.themeforest.net/user/xxx
+// ================================================================================================
+
+.master-footer__nav {
+
+  /* Footer menu links */
+  .nav-link {
+    @include color('footer', 'link-color');
+    @include transition;
+    font-size:$footer-font-size;
+    font-weight: $footer-font-weight;
+
+    /* Change the hover, focus, active state links for better highlighting */
+    #{$hover-tags} {
+      @include color('footer', 'hover-color');
+    }
+
+    #{$focus-tags},
+    #{$active-tags} {
+      @include color('footer', 'active-color');
+    }
+  }
+
+}

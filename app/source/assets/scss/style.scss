@@ -43,15 +43,12 @@
 //----------------------------------*\
 // VENDORS & VENDORS EXTENSIONS
 //----------------------------------*/
-// TODO, check what this guy is doing https://github.com/clawfire/Brasserie-Schuman/blob/ac0221058b295dafd1a58644ac9033604c0b639a/_sass/lib/_lib.scss
 @import
-	'vendors/external',
-	//'vendors/normalize', // TODO, i think this is not required, becuase bootstrap is using Reboot builds upon Normalize. However pls confirm when get time. ok
 	'vendors/media-queries',
     'vendors-extensions/chosen',
-    'vendors-extensions/dropzone',
-    'vendors-extensions/multi-select',
-    'vendors-extensions/jquery-steps',
+    //'vendors-extensions/dropzone',
+    //'vendors-extensions/multi-select',
+    //'vendors-extensions/jquery-steps',
 	'vendors-extensions/bootstrap-datepicker.standalone';
 
 //----------------------------------*\
@@ -69,11 +66,12 @@
 	'partials/layout',
 	'partials/header',
 	'partials/header-nav',
-	'partials/sidebar',
-	'partials/sidebar-nav',
-	'partials/aside',
+	//'partials/sidebar',
+	//'partials/sidebar-nav',
+	//'partials/aside',
 	'partials/main',
-	'partials/footer';
+	'partials/footer',
+	'partials/footer-nav';
 
 //----------------------------------*\
 // ENHANCEMENT COMPONENTS

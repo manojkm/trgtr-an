@@ -29,37 +29,49 @@ $contextual: (
         'success': (
                 'base': $grass,
                 'light': lighten($grass, 6%),
+                'x-light': lighten($grass, 10%),
                 'dark': darken($grass, 6%),
+                'x-dark': darken($grass, 10%),
                 'font-color': #fff,
         ),
         'danger': (
                 'base': $grapefruit,
                 'light': lighten($grapefruit, 6%),
+                'x-light': lighten($grapefruit, 10%),
                 'dark': darken($grapefruit, 6%),
+                'x-dark': darken($grapefruit, 10%),
                 'font-color': #fff,
         ),
         'warning': (
                 'base': $sunflower,
                 'light': lighten($sunflower, 6%),
+                'x-light': lighten($sunflower, 10%),
                 'dark': darken($sunflower, 6%),
+                'x-dark': darken($sunflower, 10%),
                 'font-color': #fff,
         ),
         'info': (
                 'base': $aqua,
                 'light': lighten($aqua, 6%),
+                'x-light': lighten($aqua, 10%),
                 'dark': darken($aqua, 6%),
+                'x-dark': darken($aqua, 10%),
                 'font-color': #fff,
         ),
         'light': (
                 'base': $light,
                 'light': lighten($light, 6%),
+                'x-light': lighten($light, 10%),
                 'dark': darken($light, 6%),
+                'x-dark': darken($light, 10%),
                 'font-color': #000,
         ),
         'dark': (
                 'base': $dark,
                 'light': lighten($dark, 6%),
+                'x-light': lighten($dark, 10%),
                 'dark': darken($dark, 6%),
+                'x-dark': darken($dark, 10%),
                 'font-color': #fff,
         ),
 );
@@ -76,7 +88,8 @@ $font-html: (
 
 $font: (
         font: ("Source Sans Pro", Arial, sans-serif),
-        color: $gray-800, /* Global text color on <body> */
+        //color: $gray-800, /* Global text color on <body> */
+        color: $dark-blue-custom, /* Global text color on <body> */
         weight-light: 300,
         weight-normal: 400,
         weight-semi: 600,
@@ -114,7 +127,7 @@ $lh-base: line-height(line-height) !default;
 $enable-rounded: true !default;
 
 /* Breadcrumb */
-$enable-breadcrumb: true !default;
+$enable-breadcrumb: false !default;
 
 //----------------------------------*\
 // SELECTION
@@ -155,16 +168,13 @@ $text-color: $grey-dark;
 // HEADER & NAVBAR
 //----------------------------------*/
 /* Header color variables can be found in themes/_theme-map.scss */
-$header-height: 50px;
-$navbar-font-size: 13px;
+$header-height: 60px;
+$navbar-font-size: $font-size-lg;
+$navbar-font-weight: $font-wh-semi;
 $navbar-link-height: $header-height;
 $navbar-link-md-height: $header-height - 10;
 
 $navbar-text-font-size: $navbar-font-size;
-//$navlink-padding-y: 0px;
-//$navlink-padding-x: 0px;
-//$navbar-toggler-bg:;
-//$navbar-toggler-border-colour:;
 $navbar-item-mobile-bottom-border: true;
 
 //----------------------------------*\
@@ -326,7 +336,7 @@ $breadcrumb-menu-hover-color: $gray-800 !default;
 //----------------------------------*\
 // MAIN CONTENT WRAPPERS
 //----------------------------------*/
-$main-content-padding-y: 20px;
+$main-content-padding-y: 0px;
 $main-content-padding-x: 0;
 
 //----------------------------------*\
@@ -383,7 +393,7 @@ $sidebar-footer-icon-font-size: 15px;
 //----------------------------------*/
 
 $btn-border-size: $border-thin;
-$btn-font-weight: $font-wh-normal !default;
+$btn-font-weight: $font-wh-semi !default;
 
 /* Button with icon */
 $btn-icon-padding-left-right: 3px !default;
@@ -416,13 +426,21 @@ $btn-min-height-lg: 0px !default;
 $btn-line-height-lg: $lh-base !default;
 $btn-radius-lg: $border-radius-lg;
 
+/* Extra Large button (.btn-xl) */
+$btn-font-size-xl: $font-size-xl !default;
+$btn-padding-y-xl: .8rem !default;
+$btn-padding-x-xl: 1.5rem !default;
+$btn-min-width-xl: 150px !default;
+$btn-min-height-xl: 0px !default;
+$btn-line-height-xl: $lh-base !default;
+$btn-radius-xl: $border-radius-xl;
+
 /* Round button radius (.btn-round) */
 $btn-radius-round: 30px;
 
 /* Raised button(.btn-raised) */
 $btn-raised-box-shadow-y-offset: 5px;
 $btn-raised-box-shadow-y-offset-hover:7px;
-
 
 /* Small icon button (.btn-sm.btn-icon.btn-round) */
 $btn-icon-font-size-sm: $btn-font-size-sm;
@@ -439,8 +457,32 @@ $btn-icon-font-size-lg: $btn-font-size-lg;
 $btn-icon-size-lg-inner: ($btn-icon-font-size-lg * $btn-line-height-lg) + ($btn-padding-y-lg * 2) !default;
 $btn-icon-size-lg: calc(#{$btn-icon-size-lg-inner} + #{$btn-border-size * 2}) !default;
 
+/* Extra Large icon button (.btn-xl.btn-icon.btn-round) */
+$btn-icon-font-size-xl: $btn-font-size-xl;
+$btn-icon-size-xl-inner: ($btn-icon-font-size-xl * $btn-line-height-xl) + ($btn-padding-y-xl * 2) !default;
+$btn-icon-size-xl: calc(#{$btn-icon-size-xl-inner} + #{$btn-border-size * 2}) !default;
+
 /* Disabled button opacity */
 $btn-disabled-opacity: 0.5;
+
+
+//----------------------------------*\
+// MARK
+//----------------------------------*/
+/* Extra small(.mark-xs) */
+$mark-underline-height-xs:0.125rem; /*2px*/
+
+/* Small(.mark-sm) */
+$mark-underline-height-sm:0.25rem; /*4px*/
+
+/* Regular*/
+$mark-underline-height:0.5rem; /*8px*/
+
+/* Large(.mark-lg) */
+$mark-underline-height-lg:0.75rem; /*12px*/
+
+/* Extra large(.mark-xl) */
+$mark-underline-height-xl:1rem; /*16px*/
 
 //----------------------------------*\
 // FORMS
@@ -1035,6 +1077,8 @@ $tooltip-line-height: 1.25 !default;
 // FOOTER
 //----------------------------------*/
 $footer-height: 30px;
+$footer-font-size: $font-size-sm;
+$footer-font-weight: $font-wh-normal;
 
 //----------------------------------*\
 // TRANSITION
@@ -1117,6 +1161,13 @@ $a-href-tags: '&[href]:hover, &[href]:focus, &[href].focus, &[href]:active, &[hr
 /* Beta 3 Migration changes */
 /* - Removed &:focus, &.focus due to the focus issues on buttons */
 $a-tags: '&:hover, &:active, &.active, &:active:focus, &.active:focus, &:active:hover, &.active:hover, &:not([disabled]):not(.disabled):active, &:not([disabled]):not(.disabled).active, &:not([disabled]):not(.disabled):active:focus, &:not([disabled]):not(.disabled).active:focus';
+
+$hover-tags:'&:hover';
+$focus-tags:'&:focus, &.focus';
+$hover-focus-tags:'&:hover, &:focus, &.focus';
+$active-tags: '&:active, &.active, &:active:focus, &.active:focus, &:active:hover, &.active:hover, &:not([disabled]):not(.disabled):active, &:not([disabled]):not(.disabled).active, &:not([disabled]):not(.disabled):active:focus, &:not([disabled]):not(.disabled).active:focus';
+
+
 
 //----------------------------------*\
 // DISABLED SELECTORS

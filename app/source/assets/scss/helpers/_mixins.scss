@@ -1,6 +1,6 @@
 // ================================================================================================
 // File Name: mixins.scss
-// Description: 
+// Description:
 // ----------------------------------------------------------------------------------------------
 // Item Name: xxx - Responsive Admin Theme
 // Version: 1.2
@@ -295,7 +295,7 @@ Usage @include opacity(1);
 
 // TODO: http://demos.creative-tim.com/now-ui-kit/documentation/tutorial-components.html?ref=nuk-free-doc#buttons-row
 
-@mixin btn-theme($theme-color, $bg:fill, $tone:base, $tone-hover:dark, $font-color:font-color) {
+@mixin btn-theme($theme-color, $bg:fill, $tone:base, $tone-hover:dark, $tone-active:x-dark, $font-color:font-color) {
 
   @if map-has-key($contextual, $theme-color) { /* Contextual variations */
     border-color: contextual-color($theme-color, $tone);
@@ -324,12 +324,8 @@ Usage @include opacity(1);
     }
 
   }
-  //&:not(.btn-emboss){}
-  #{$a-tags},
-  .show > &.dropdown-toggle,
-  .show > &.dropdown-toggle:focus,
-  .show > &.dropdown-toggle:hover {
 
+  #{$hover-tags} {
     @if map-has-key($contextual, $theme-color) { /* Contextual variations */
       border-color: contextual-color($theme-color, $tone-hover);
       background-color: contextual-color($theme-color, $tone-hover);
@@ -339,55 +335,26 @@ Usage @include opacity(1);
       @include background-color($theme-color, $tone-hover);
       @include color($theme-color, $font-color);
     }
-
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .125);
-    outline: 0;
   }
 
-  &:hover {
-    box-shadow: none;
-    //box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-    //box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht;
-  }
+  #{$active-tags},
+  #{$focus-tags},
+  .show > &.dropdown-toggle,
+  .show > &.dropdown-toggle:focus,
+  .show > &.dropdown-toggle:hover {
 
-  #{$disabled-tags},
-  fieldset[disabled] & {
-    &,
-    #{$a-tags} {
-
-      @if map-has-key($contextual, $theme-color) { /* Contextual variations */
-        border-color: contextual-color($theme-color, $tone);
-        /* Filled button */
-        @if $bg == fill {
-          background-color: contextual-color($theme-color, $tone);
-          color: contextual-color($theme-color, $font-color);
-        }
-        /* Outline button */
-        @if $bg == outline {
-          background-color: transparent;
-          color: contextual-color($theme-color, $tone);
-        }
-
-      } @else { /* Theme variations */
-        @include border-color($theme-color, $tone);
-        /* Filled button */
-        @if $bg == fill {
-          @include background-color($theme-color, $tone);
-          @include color($theme-color, $font-color);
-        }
-        /* Outline button */
-        @if $bg == outline {
-          background-color: transparent;
-          @include color($theme-color, $tone);
-        }
-
-      }
-
+    @if map-has-key($contextual, $theme-color) { /* Contextual variations */
+      border-color: contextual-color($theme-color, $tone-active);
+      background-color: contextual-color($theme-color, $tone-active);
+      color: contextual-color($theme-color, $font-color);
+    } @else { /* Theme variations */
+      @include border-color($theme-color, $tone-active);
+      @include background-color($theme-color, $tone-active);
+      @include color($theme-color, $font-color);
     }
   }
 
   &.btn-link {
-    background-color: transparent;
 
     @if map-has-key($contextual, $theme-color) { /* Contextual variations */
       color: contextual-color($theme-color, $tone);
@@ -395,40 +362,25 @@ Usage @include opacity(1);
       @include color($theme-color, $tone);
     }
 
-    #{$a-tags},
-    &.focus,
-    .show > &.dropdown-toggle,
-    .show > &.dropdown-toggle:focus,
-    .show > &.dropdown-toggle:hover {
-      background-color: transparent;
-      text-decoration: none;
-      box-shadow: none;
-
-      @if map-has-key($contextual, $theme-color) {
+    #{$hover-tags} {
+      @if map-has-key($contextual, $theme-color) { /* Contextual variations */
         color: contextual-color($theme-color, $tone-hover);
-      } @else {
+      } @else { /* Theme variations */
         @include color($theme-color, $tone-hover);
       }
     }
 
-    //&.disabled,
-    //&:disabled,
-    //&[disabled],
-    //fieldset[disabled] & {
-    //  &,
-    //  #{$a-tags} {
-    //    background-color: transparent;
-    //    text-decoration: none;
-    //    box-shadow: none;
-    //    @if map-has-key($contextual, $theme-color) { /* Contextual variations */
-    //      color: contextual-color($theme-color, $tone);
-    //    } @else { /* Theme variations */
-    //      @include color($theme-color, $tone);
-    //    }
-    //
-    //  }
-    //
-    //}
+    #{$active-tags},
+    #{$focus-tags},
+    .show > &.dropdown-toggle,
+    .show > &.dropdown-toggle:focus,
+    .show > &.dropdown-toggle:hover {
+      @if map-has-key($contextual, $theme-color) {
+        color: contextual-color($theme-color, $tone-active);
+      } @else {
+        @include color($theme-color, $tone-active);
+      }
+    }
 
   }
   &.btn-raised {
@@ -439,7 +391,8 @@ Usage @include opacity(1);
       box-shadow: 0 $btn-raised-box-shadow-y-offset 0 0 $box-shadow-color;
     }
 
-    #{$a-tags},
+    #{$hover-focus-tags},
+    #{$active-tags},
     .show > &.dropdown-toggle,
     .show > &.dropdown-toggle:focus,
     .show > &.dropdown-toggle:hover {
@@ -447,16 +400,22 @@ Usage @include opacity(1);
         border-color: contextual-color($theme-color, $tone);
         background-color: contextual-color($theme-color, $tone);
         color: contextual-color($theme-color, $font-color);
-        box-shadow: 0 $btn-raised-box-shadow-y-offset-hover 0 0 contextual-color($theme-color, $tone-hover);
       } @else { /* Theme variations */
         @include border-color($theme-color, $tone);
         @include background-color($theme-color, $tone);
         @include color($theme-color, $font-color);
+      }
+    }
+
+    #{$hover-tags},
+    #{$active-tags} {
+      @if map-has-key($contextual, $theme-color) { /* Contextual variations */
+        box-shadow: 0 $btn-raised-box-shadow-y-offset-hover 0 0 contextual-color($theme-color, $tone-hover);
+      } @else { /* Theme variations */
         $box-shadow-color: theme-color($theme-color, $tone-hover);
         box-shadow: 0 $btn-raised-box-shadow-y-offset-hover 0 0 $box-shadow-color;
       }
     }
-
   }
 
 }
@@ -465,7 +424,7 @@ Usage @include opacity(1);
 // SOCIAL BUTTONS
 //----------------------------------*/
 
-@mixin btn-social-theme($tone:base, $tone-hover:dark, $font-color:font-color, $bg:fill) {
+@mixin btn-social-theme($tone:base, $tone-hover:dark, $tone-active:x-dark, $font-color:font-color, $bg:fill) {
 
   border-color: $tone;
   /* Filled button */
@@ -479,75 +438,34 @@ Usage @include opacity(1);
     color: $tone
   }
 
-  #{$a-tags},
-  .show > &.dropdown-toggle,
-  .show > &.dropdown-toggle:focus,
-  .show > &.dropdown-toggle:hover {
-
+  #{$hover-tags} {
     border-color: $tone-hover;
     background-color: $tone-hover;
     color: $font-color;
-    box-shadow: none;
-    outline: 0;
   }
 
-  &:hover {
-    //box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-    //box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht;
-  }
-
-  &.disabled,
-  &:disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &,
-    #{$a-tags} {
-
-      border-color: $tone;
-      /* Filled button */
-      @if $bg == fill {
-        background-color: $tone;
-        color: $font-color;
-      }
-      /* Outline button */
-      @if $bg == outline {
-        background-color: transparent;
-        color: $tone;
-      }
-
-    }
+  #{$active-tags},
+  #{$focus-tags},
+  .show > &.dropdown-toggle,
+  .show > &.dropdown-toggle:focus,
+  .show > &.dropdown-toggle:hover {
+    border-color: $tone-active;
+    background-color: $tone-active;
+    color: $font-color;
   }
 
   &.btn-link {
-    background-color: transparent;
     color: $tone;
-
-    #{$a-tags},
-    &.focus,
-    .show > &.dropdown-toggle,
-    .show > &.dropdown-toggle:focus,
-    .show > &.dropdown-toggle:hover {
-      background-color: transparent;
-      text-decoration: none;
-      box-shadow: none;
+    #{$hover-tags} {
       color: $tone-hover;
     }
 
-    //&.disabled,
-    //&:disabled,
-    //&[disabled],
-    //fieldset[disabled] & {
-    //  &,
-    //  #{$a-tags} {
-    //    background-color: transparent;
-    //    text-decoration: none;
-    //    box-shadow: none;
-    //    color: $tone;
-    //  }
-    //
-    //}
-
+    #{$active-tags},
+    #{$focus-tags} {
+      color: $tone-active;
+    }
   }
+
 }
 
 //----------------------------------*\
@@ -621,46 +539,6 @@ Usage @include opacity(1);
 
   }
 
-  &:hover {
-    //box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-    //box-shadow: 0 .125em $off-wht, inset 0 .063em $off-wht;
-  }
-
-  &.disabled,
-  &:disabled,
-  &[disabled] {
-    &,
-    #{$a-href-tags} {
-
-      @if map-has-key($contextual, $theme-color) { /* Contextual variations */
-        /* Filled button */
-        @if $bg == fill {
-          background-color: contextual-color($theme-color, $tone);
-          color: contextual-color($theme-color, $font-color);
-        }
-        /* Outline button */
-        @if $bg == outline {
-          background-color: transparent;
-          color: contextual-color($theme-color, $tone);
-        }
-
-      } @else { /* Theme variations */
-        @include border-color($theme-color, $tone);
-        /* Filled button */
-        @if $bg == fill {
-          @include background-color($theme-color, $tone);
-          @include color($theme-color, $font-color);
-        }
-        /* Outline button */
-        @if $bg == outline {
-          background-color: transparent;
-          @include color($theme-color, $tone);
-        }
-
-      }
-
-    }
-  }
 }
 
 //----------------------------------*\
@@ -998,13 +876,6 @@ Usage @include opacity(1);
     @include border-color($theme-color, $tone-border);
     @include color($theme-color, $font-color);
   }
-  /*  &:hover {
-      @if map-has-key($contextual, $theme-color) { !* Contextual variations *!
-        background-color: contextual-color($theme-color, $tone-hover);
-      } @else { !* Theme variations *!
-        @include background-color($theme-color, $tone-hover);
-      }
-    }*/
 
   /* Close button */
   @at-root &.alert-dismissible > .close {

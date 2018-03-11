@@ -1,182 +1,38 @@
-<nav class="navbar navbar-expand-lg px-0 py-0 master-header__navbar">
+<nav class="navbar navbar-expand-lg master-header__navbar py-3">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Logo</a>
+        <!-- /Brand -->
 
-    <!-- Mobile sidebar toggle button -  visible on mobile devices only -->
-    <button class="sidebar--toggler collapsed d-lg-none" type="button" data-side="hide">
-        <!-- To display the "hamburger icon" -->
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <!-- /To display the "hamburger icon" -->
-    </button>
-    <!-- /Mobile Sidebar toggle button -  visible on mobile devices only -->
+        <!-- Header navbar toggle button -->
+        <button class="navbar-toggler minus collapsed" type="button" data-toggle="collapse" data-target="#nav-content"
+                aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- To display the "hamburger icon" -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!-- /To display the "hamburger icon" -->
+        </button>
+        <!-- /Header navbar toggle button -->
 
-    <!-- Brand -->
-    <a class="navbar-brand" href="#">Logo</a>
-    <!-- /Brand -->
+        <div class="collapse navbar-collapse justify-content-start" id="nav-content">
 
-
-    <!-- Sidebar toggle button -->
-    <button class="sidebar--toggler collapsed rarr d-none d-lg-block" type="button" data-side="hide">
-        <!-- To display the "hamburger icon" -->
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <!-- /To display the "hamburger icon" -->
-    </button>
-    <!-- /Sidebar toggle button -->
-
-
-    <!-- Header navbar toggle button -->
-    <button class="navbar-toggler minus collapsed" type="button" data-toggle="collapse" data-target="#nav-content"
-            aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-        <!-- To display the "hamburger icon" -->
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <!-- /To display the "hamburger icon" -->
-    </button>
-    <!-- /Header navbar toggle button -->
-
-
-    <div class="collapse navbar-collapse justify-content-start" id="nav-content">
-
-        <!-- Welcome text -->
-        <span class="navbar-text py-2 px-3 d-lg-none d-xl-block"> Welcome to Obeus admin panel </span>
-        <!-- /Welcome text -->
-
-        <!-- Header left navigation -->
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Link left 1</a>
-            </li>
-        </ul>
-        <!-- /Header left navigation -->
-
-        <!-- Header right navigation -->
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Link 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Link 2</a>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle px-3 py-2" href="#" id="navbarDropdownMenuLink"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="icon-envelope"></i>Themed Dropdown link
-                </a>
-
-                <ul class="dropdown-menu extended themed" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <div class="dropdown-header">Dropdown header</div>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#"><i class=" fas fa-suitcase"></i>Action
-                        <span class="ml-auto badge badge-info">42</span></a></li>
-                    <li><a class="dropdown-item" href="#"><i class="icon-envelope"></i>Another action
-                        <span class="ml-auto badge badge-secondary">42</span></a></li>
-                    <li><a class="dropdown-item disabled" href="#"><i class="icon-bubbles"></i>Disabled link
-                        <span class="ml-auto badge badge-primary">42</span></a></li>
-                    <li class="dropdown-submenu">
-                        <a class="dropdown-item dropdown-toggle" href="#"><i class="fa fa-tasks"></i>Submenu</a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Submenu action</a></li>
-                            <li><a class="dropdown-item" href="#">Another submenu action</a></li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Second
-                                subsubmenu</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                </ul>
-            </li>
-
-            <!-- Inbox Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link px-3 py-2 dropdown-toggle no-arr" href="#" id="navbarDropdownInbox"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="icon-envelope"></i>
-                    <span class="badge badge-round badge-danger floating">5</span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right list-unstyled extended inbox"
-                    aria-labelledby="navbarDropdownInbox">
-                    <li>
-                        <div class="dropdown-header">Dropdown header</div>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class=" fas fa-suitcase"></i>Action
-                        <span class="ml-auto badge badge-info">42</span>
-                    </a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
-                            <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item disabled" href="#">Disabled link</a></li>
-                    <li>
-                        <div class="dropdown-divider"></div>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                </ul>
-            </li>
-            <!-- /Inbox Dropdown -->
-            <li class="nav-item ">
-                <a class="nav-link px-3 py-2 disabled" href="#">Disabled</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link px-3 py-2 dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <!-- Dropdown -->
-                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
-                    <h6 class="dropdown-header">Dropdown header</h6>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item disabled" href="#">Disabled link</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-                <!-- /Dropdown -->
-            </li>
-        </ul>
-        <!-- /Header right navigation -->
-
-        <!-- Search -->
-        <form class="master-header__search px-3" action="" role="search">
-            <input type="text" placeholder="Search here..."/>
-            <span></span>
-        </form>
-        <!-- /Search -->
-
+            <!-- Header right navigation -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-4 py-2 mr-3" href="#">Product & Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 py-2" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link px-0 py-2">or</span>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary btn-raised" href="#" role="button">Sign Up</a>
+                </li>
+            </ul>
+            <!-- /Header right navigation -->
+        </div>
     </div>
-
-    <!-- Aside toggle button -->
-    <button class="aside--toggler x collapsed d-none d-lg-block" type="button" data-aside="show">
-        <!-- To display the "hamburger icon" -->
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <!-- /To display the "hamburger icon" -->
-    </button>
-    <!-- /Aside toggle button -->
-
 </nav>

@@ -151,6 +151,12 @@
 .card-img-bottom {
   @include border-bottom-radius($card-inner-border-radius);
 }
+.card-img-right {
+  @include border-right-radius($card-inner-border-radius);
+}
+.card-img-left {
+  @include border-left-radius($card-inner-border-radius);
+}
 
 .card-footer {
   background-color: $card-footer-bg;

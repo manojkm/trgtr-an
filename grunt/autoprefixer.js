@@ -1,7 +1,8 @@
 module.exports = {
 
     options: {
-        map: true //Autoprefixer will not remove sourcemap info from scss file.
+        map: true, //Autoprefixer will not remove sourcemap info from scss file.
+        browsers: ['last 2 versions']
     },
 
     dev: {

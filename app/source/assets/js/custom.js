@@ -1219,10 +1219,10 @@ $(document).on("app.plugin", function () {
 //----------------------------------*/
 
 $(document).ready(function () {
-    appMaster.responsive();
-    appMaster.sidebar();
+    // appMaster.responsive();
+    // appMaster.sidebar();
     appMaster.dropdown();
-    appMaster.aside();
+    // appMaster.aside();
     appMaster.tooltip();
     appMaster.popover();
     appMaster.input_group_focus();
