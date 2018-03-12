@@ -5,24 +5,10 @@ module.exports = {
 
         collections: [
             {
-                name: 'components',
-                sortby: 'posted',
-                sortorder: 'descending'
+                name: 'primary'
             },
             {
-                name: 'dashboard',
-                sortby: 'posted',
-                sortorder: 'descending'
-            },
-            {
-                name: 'icons',
-                sortby: 'posted',
-                sortorder: 'descending'
-            },
-            {
-                name: 'forms',
-                sortby: 'posted',
-                sortorder: 'descending'
+                name: 'secondary'
             }],
 
         flatten: true,

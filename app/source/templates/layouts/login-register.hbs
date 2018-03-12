@@ -4,25 +4,14 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     {{> head }}
 </head>
-<body class="theme-dark">
+<body class="theme-yellow ">
 
 <div class="main-wrap">
     <section class="app">
 
-        <!-- Header -->
-        <header class="master-header">
-            <div class="master-header__wrap">{{> header }}</div>
-        </header>
-        <!-- /Header -->
-
-
         <!--Main content-->
         <main class="content">
-            <section class="content__wrap">
-
-                <!-- Page title -->
-                {{> page-title }}
-                <!-- /Page title -->
+            <section class="content__wrap py-5  bg-secondary d-flex justify-content-center align-items-center">
 
                 <!-- Page content -->
                     {{> body }}
@@ -31,13 +20,6 @@
             </section>
         </main>
         <!-- /Main content-->
-
-
-        <!-- Footer -->
-        <footer class="master-footer">
-            <div class="master-footer__wrap"> {{> footer }}</div>
-        </footer>
-        <!-- /Footer -->
 
     </section>
 </div>
