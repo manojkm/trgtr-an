@@ -26,6 +26,10 @@
     #{$active-tags} {
       @include color('footer', 'active-color');
     }
+    &.disabled {
+      @include opacity(0.3);
+      cursor: not-allowed;
+    }
   }
 
 }

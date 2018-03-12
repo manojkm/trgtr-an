@@ -19,7 +19,7 @@ module.exports = {
     ],
 
     task_img: [
-        ['newer:imagemin', 'newer:sprite',/* 'sync',*/ 'notify:img']
+        ['newer:copy:images', 'newer:imagemin', 'newer:sprite',/* 'sync',*/ 'notify:img']
     ],
 
     task_wp_theme_php_flies: [

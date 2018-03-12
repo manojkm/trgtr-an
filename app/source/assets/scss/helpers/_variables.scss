@@ -168,7 +168,7 @@ $text-color: $grey-dark;
 // HEADER & NAVBAR
 //----------------------------------*/
 /* Header color variables can be found in themes/_theme-map.scss */
-$header-height: 60px;
+$header-height: 80px;
 $navbar-font-size: $font-size-lg;
 $navbar-font-weight: $font-wh-semi;
 $navbar-link-height: $header-height;
@@ -1076,7 +1076,7 @@ $tooltip-line-height: 1.25 !default;
 //----------------------------------*\
 // FOOTER
 //----------------------------------*/
-$footer-height: 30px;
+$footer-min-height:50px;
 $footer-font-size: $font-size-sm;
 $footer-font-weight: $font-wh-normal;
 

@@ -86,9 +86,9 @@
 .content {
   &__wrap {
     @if bool($enable-breadcrumb) == true {
-      padding: $main-content-padding-y $main-content-padding-x ($footer-height + $main-content-padding-y);
+      padding: $main-content-padding-y $main-content-padding-x ($footer-min-height + $main-content-padding-y);
     } @else {
-      padding: ($header-height + $main-content-padding-y) $main-content-padding-x ($footer-height + $main-content-padding-y);
+      padding: ($header-height + $main-content-padding-y) $main-content-padding-x ($footer-min-height + $main-content-padding-y);
     }
     min-height: 100vh;
   }

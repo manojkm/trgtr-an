@@ -1175,7 +1175,22 @@ var appMaster = {
                 agree: "Please accept our policy"
             }
         });
+    },
+
+    set_footer_height: function (){
+
+        function set_heights() {
+            var footerHeight = $('.master-footer').height();
+            $('.content__wrap').css('padding-bottom', footerHeight+'px');
+        }
+        set_heights();
+
+        $(window).resize(function() {
+            set_heights();
+        });
+
     }
+
 
 };
 
@@ -1236,6 +1251,8 @@ $(document).ready(function () {
     appMaster.form_repeater();
     appMaster.max_length();
     appMaster.jquery_validation();
+    appMaster.set_footer_height();
+
 });
 
 

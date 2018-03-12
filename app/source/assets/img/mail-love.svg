@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="456.389px" height="442.857px" viewBox="0 0 456.389 442.857" enable-background="new 0 0 456.389 442.857"
+	 xml:space="preserve">
+<g>
+	<polygon fill="#494949" points="436.889,18.726 409.387,16.322 432.861,8.188 456.389,0 447.281,23.151 438.173,46.302 	"/>
+	<g>
+		<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+			238.773,179.499 269.129,182.237 270.633,212.68 		"/>
+		<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+			221.101,196.468 251.458,199.206 252.961,229.648 		"/>
+		<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+			203.429,213.438 233.785,216.175 235.29,246.616 		"/>
+		
+			<line fill="none" stroke="#494949" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="437.911" y1="18.153" x2="233.058" y2="214.855"/>
+	</g>
+	<rect x="34.89" y="86.241" fill="#00B76C" width="411" height="258"/>
+	<polygon fill="#F05F5A" points="240.472,86.241 446.067,86.241 343.27,164.711 240.472,243.131 137.675,164.687 34.876,86.241 	"/>
+	<g>
+		<g>
+			<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+				40.773,370.499 71.129,373.237 72.633,403.68 			"/>
+			<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+				23.101,387.468 53.458,390.206 54.961,420.648 			"/>
+			<polyline fill="none" stroke="#494949" stroke-width="10" stroke-linecap="square" stroke-miterlimit="10" points="
+				5.429,404.438 35.785,407.175 37.29,437.616 			"/>
+			
+				<line fill="none" stroke="#494949" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="239.911" y1="209.153" x2="35.059" y2="405.855"/>
+		</g>
+	</g>
+</g>
+</svg>
