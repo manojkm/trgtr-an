@@ -1,9 +1,9 @@
 {
-  "name": "ImageProcez",
-  "title": "ImageProcez : Website",
+  "name": "trgtr",
+  "title": "trgtr : Find the right contacts",
   "version": "1.0.0",
   "copyright": "2016",
-  "description": "Setting up a website for ImageProcez",
+  "description": "Setting up a website for trgtr",
   "main": "index.html",
   "scripts": {
     "test": "testing"
