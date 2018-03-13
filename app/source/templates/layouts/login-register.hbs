@@ -11,7 +11,7 @@
 
         <!--Main content-->
         <main class="content">
-            <section class="content__wrap py-5  bg-secondary d-flex justify-content-center align-items-center">
+            <section class="content__wrap py-5 {{#is page.title "Login"}} bg-info {{ else }}bg-secondary{{/is}} d-flex justify-content-center align-items-center">
 
                 <!-- Page content -->
                     {{> body }}

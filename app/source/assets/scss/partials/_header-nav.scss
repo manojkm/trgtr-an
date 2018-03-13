@@ -16,6 +16,9 @@
   /* Change the brand and text color */
   .navbar-brand {
     @include color('primary', 'base');
+    img{
+      width: 150px;
+    }
   }
 
   .navbar-text {
@@ -42,7 +45,7 @@
 
     @include max-screen($screen-md-max) {
       @if bool($navbar-item-mobile-bottom-border) == true {
-        @include border-bottom-color('header', 'light');
+        @include border-bottom-color('header', 'active-color');
         border-bottom: 1px solid;
       } @else {
         border-bottom: 0
@@ -81,8 +84,6 @@
     min-width: 50px;
 
     @include max-screen($screen-md-max) {
-      min-height: $navbar-link-md-height;
-      text-align: left;
       justify-content: flex-start;
     }
 
@@ -109,8 +110,9 @@
 
 @include max-screen($screen-md-max) {
   .navbar-collapse {
-    max-height: 300px;
-    overflow-y: scroll;
+    //max-height:500px;
+    //overflow-y: scroll;
+    //height: 100vh;
   }
 }
 

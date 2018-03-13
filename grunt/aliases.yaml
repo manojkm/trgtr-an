@@ -15,6 +15,7 @@ task_js:
 #  - 'wiredep'
   - 'notify:js'
 task_img:
+  - 'copy:images'
   - 'imagemin'
   - 'sprite'
   - 'notify:img'

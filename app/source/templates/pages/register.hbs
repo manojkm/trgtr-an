@@ -1,6 +1,6 @@
 ---
 layout: login-register
-title: "Login"
+title: "Register"
 membership: true
 posted: 2018-03-09
 ---
@@ -11,11 +11,17 @@ posted: 2018-03-09
         </div>
         <div class="col-12 col-md">
             <p class="mx-auto w-50 text-center">
-                <a  href="index.html"><img src="{{assets}}/img/logo-trgtr-white.svg" class="w-50 mb-3" alt="trgtr"></a></p>
+                <a  href="index.html"><img src="{{assets}}/img/logo-trgtr-black.svg" class="w-50 mb-3" alt="trgtr"></a></p>
             <div class="card p-3">
                 <div class="card-body">
-                    <h5 class="font-weight-bold pb-3">Welcome back!</h5>
+                    <h5 class="font-weight-bold pb-3">Create a Free Account</h5>
                     <form class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="inputFullName">Email address</label>
+                            <input type="text" class="form-control form-control-lg" id="inputFullName" placeholder="FullName" required>
+                            <div class="invalid-feedback">Please provide a FullName.</div>
+                        </div>
+
                         <div class="form-group">
                             <label for="inputEmail">Email address</label>
                             <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="Enter email" required>
@@ -26,8 +32,13 @@ posted: 2018-03-09
                             <input type="password" class="form-control form-control-lg" id="inputPassword" placeholder="Password" required>
                             <div class="invalid-feedback">Please provide a password.</div>
                         </div>
+                        <div class="form-group">
+                            <label for="inputConfirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg" id="inputConfirmPassword" placeholder="Password" required>
+                            <div class="invalid-feedback">Please provide a password.</div>
+                        </div>
 
-                        <button type="submit" class="btn btn-info btn-xl btn-raised btn-block">Log me in</button>
+                        <button type="submit" class="btn btn-primary btn-xl btn-raised btn-block">Create My Free Account</button>
                     </form>
                     <script>
                         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -51,12 +62,9 @@ posted: 2018-03-09
                     </script>
                 </div>
                 <div class="card-footer bg-white justify-content-center pt-4">
-                    <p class="h5 text-muted">Don't have an account?<a href="register.html" class="text-primary">
-                        <mark class="p-0 mark-primary mark-sm">Sign up today!</mark>
+                    <p class="h6 text-muted">Already registered?<a href="login.html" class="text-info">
+                        <mark class="p-0 mark-info mark-sm">Please login!</mark>
                     </a></p>
-                </div>
-                <div class="card-footer bg-white justify-content-center border-top-0">
-                    <p class="h6"><a href="#" class="text-muted">Frogot your password?</a></p>
                 </div>
 
             </div>

@@ -29,7 +29,7 @@ module.exports = {
     },
 
     images: {
-        files: ['<%= site.src_assets %>/img/**/*.{png,jpg,gif}'],
+        files: ['<%= site.src_assets %>/img/**/*.{png,jpg,gif,svg}'],
         tasks: ['concurrent:task_img'],
     },
 
