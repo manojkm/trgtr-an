@@ -11,28 +11,26 @@ title: "Welcome"
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Search</h5>
+                    <h4 class="card-title">Search</h4>
                 </div>
                 <div class="card-body">
                     <form action="">
                         <div class="form-group">
-                                <label class="col-form-label mr-3">Search by</label>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioDomain" name="Search-by"
-                                           class="custom-control-input" checked>
-                                    <label class="custom-control-label" for="customRadioDomain">Domain</label>
-                                </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="customRadioIndustry" name="Search-by"
-                                           class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadioIndustry">Industry, Job Function & Location </label>
-                                </div>
+                            <label class="col-form-label mr-3">Search by</label>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioDomain" name="Search-by"
+                                       class="custom-control-input" checked>
+                                <label class="custom-control-label" for="customRadioDomain">Domain</label>
                             </div>
-
-
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioIndustry" name="Search-by"
+                                       class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioIndustry">Industry, Job Function & Location </label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="input-group input-group-lg">
-                                <input type="text" class="form-control" placeholder="Search">
+                                <input type="text" class="form-control" placeholder="eg: apple.com">
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-secondary">
                                         <i class="icon-magnifier"></i>Search
@@ -40,27 +38,161 @@ title: "Welcome"
                                 </div>
                             </div>
                         </div>
+                        <div class="form-group border rounded bg-light p-3">
 
-                        <div class="form-check form-check-inline">
-                            <label class="custom-control custom-toggle-flip custom-toggle-flip-primary">
-                                <input class="custom-control-input" required="" checked="" type="checkbox">
-                                <span class="custom-control-indicator" data-toggle-on="ON"
-                                      data-toggle-off="OFF"></span>
-                                <span class="custom-control-description">Professional</span>
-                            </label>
+                            <div class="row">
+                                <label for="inputNormal" class="col-sm-2 col-form-label text-right">Job Function </label>
+                                <div class="col-sm-10">
+                                    <select data-placeholder="Filter by job function" class="chosen-select">
+                                        <option value=""></option>
+                                        <option>Accounting executive</option>
+                                        <option>Administration executive</option>
+                                        <option>Advertising executive</option>
+                                        <option>Chairman</option>
+                                        <option>CEOr</option>
+                                        <option>Company Secretary</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <div class="form-check form-check-inline">
+                                    <label class="custom-control custom-toggle-flip custom-toggle-flip-primary">
+                                        <input class="custom-control-input" required="" checked="" type="checkbox">
+                                        <span class="custom-control-indicator" data-toggle-on="ON"
+                                              data-toggle-off="OFF"></span>
+                                        <span class="custom-control-description">Professional</span>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="custom-control custom-toggle-flip custom-toggle-flip-primary">
+                                        <input class="custom-control-input" required="" type="checkbox">
+                                        <span class="custom-control-indicator" data-toggle-on="ON"
+                                              data-toggle-off="OFF"></span>
+                                        <span class="custom-control-description">Role based </span>
+                                    </label>
+                                </div>
+                            </div>
 
-                        <div class="form-check form-check-inline">
-                            <label class="custom-control custom-toggle-flip custom-toggle-flip-primary">
-                                <input class="custom-control-input" required="" type="checkbox">
-                                <span class="custom-control-indicator" data-toggle-on="ON"
-                                      data-toggle-off="OFF"></span>
-                                <span class="custom-control-description">Role based </span>
-                            </label>
+                            <div class="col-sm-6 d-flex justify-content-end align-items-center">
+                                <button type="button" class="btn btn-link btn-info"><i class="icon-refresh"></i>Refresh All</button>
+
+                                <span data-toggle="modal" data-target="#myLeadsModal">
+    <button type="button" class="btn btn-link btn-info" data-toggle="tooltip" data-placement="right" title="Tooltip on top">
+                                   My Leads
+                                    <span class="badge badge-primary ml-1">4</span>
+                                </button>
+                                </span>
+
+                                <div class="modal fade" id="myLeadsModal" tabindex="-1" role="dialog" aria-labelledby="myLeadsModalLabel"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered " role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="myLeadsModalLabel"><i class="fas fa-exchange-alt mr-2"></i>Switch Lead list</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <div class="form-row mb-2">
+                                                    <div class="col-md-7">
+                                                        <div class="input-group">
+                                                            <select class="custom-select" id="">
+                                                                <option selected="">Choose...</option>
+                                                                <option value="1">My leads (2)</option>
+                                                                <option value="2">My leads 2 (2)</option>
+                                                                <option value="3">My leads 3 (2)</option>
+                                                                <option value="4">My leads 4 (2)</option>
+                                                            </select>
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-primary" type="button">GO</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1"><h6 class="text-center my-2">OR</h6></div>
+                                                    <div class="col-md-4">
+                                                        <a class="btn btn-outline-primary btn-block" href="#" role="button">Create new</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-
-
                     </form>
+
+
+                    <div class="row mt-5">
+                        <div class="col-sm d-flex align-items-center">
+                            <span class="mr-4"><strong>36,850</strong> results</span>
+                            <button type="button" class="btn btn-dark btn-sm"><i class="fas fa-download mr-2"></i>Download</button>
+                        </div>
+                        <div class="col-sm text-right">
+                            One of three columns
+                        </div>
+                    </div>
+
+                    <ul class="list-group mt-3" id="accordion-standard">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-sm"><a href="#" class="h6 text-info font-weight-bold">Jennie Syme</a>
+                                    <p class="small"><i class="icon-briefcase mr-2"></i>Manager, Public Relations</p>
+                                    <h5>jsyme@apple.com <span class="badge badge-round empty badge-success p-1"></span></h5></div>
+                                <div class="col-sm d-flex justify-content-end align-items-end">
+                                    <a class="accordion collapsed pl-4 text-info" data-toggle="collapse" href="#collapse1"
+                                       aria-expanded="false" role="tab">
+                                        3 Sources
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse1" class="collapse" role="tabpanel" data-parent="#accordion-standard">
+                                <div class="card card-body">
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+
+                            <div class="row">
+                                <div class="col-sm"><a href="#" class="h6 text-info font-weight-bold">Jennie Syme</a>
+                                    <p class="small"><i class="icon-briefcase mr-2"></i>Manager, Public Relations</p>
+                                    <h5>jsyme@apple.com <span class="badge badge-round empty badge-success p-1"></span></h5>
+                                </div>
+                                <div class="col-sm d-flex justify-content-end align-items-end flex-column">
+                                    <div class="mb-auto pt-3">
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add to leads"><i class="icon-plus"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Validate email"><i class="icon-envelope"></i></button>
+                                        </div>
+                                    </div>
+                                    <a class="accordion collapsed pl-4 text-info" data-toggle="collapse" href="#collapse2"
+                                       aria-expanded="false" role="tab">
+                                        3 Sources
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="collapse2" class="collapse" role="tabpanel" data-parent="#accordion-standard">
+                                <div class="card card-body">
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                    <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+
                 </div>
             </div>
 

@@ -19,7 +19,7 @@
         <!-- Header left navigation -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Search</a>
+                <a class="nav-link px-3 py-2" href="index.html">Search</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3 py-2" href="#">Validate</a>
@@ -27,8 +27,11 @@
             <li class="nav-item">
                 <a class="nav-link px-3 py-2" href="#">Leads</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Bulk Tasks</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3 py-2" href="#"  id="dropdownBulkTasks" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bulk Tasks</a>
+                <div class="dropdown-menu extended" aria-labelledby="dropdownBulkTasks">
+                    <a class="dropdown-item" href="#"><i class="fas fa-suitcase"></i>Bulk search</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3 py-2" href="#">CRM</a>
@@ -38,11 +41,20 @@
 
         <!-- Header right navigation -->
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Jonh</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3 py-2" href="#"  id="dropdownMyAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon-user mr-2"></i>John</a>
+
+                <div class="dropdown-menu extended dropdown-menu-right" aria-labelledby="dropdownMyAccount">
+                    <a class="dropdown-item" href="#">Account <i class="fas fa-suitcase ml-auto mr-0"></i></a>
+                    <a class="dropdown-item" href="#">Subscription <i class="fas fa-suitcase ml-auto mr-0"></i></a>
+                    <a class="dropdown-item" href="#">Billing & Invoice <i class="fas fa-suitcase ml-auto mr-0"></i></a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Logout <i class="fas fa-suitcase ml-auto mr-0"></i></a>
+                </div>
+
             </li>
             <li class="nav-item">
-                <a class="nav-link px-3 py-2" href="#">Help</a>
+                <a class="nav-link px-3 py-2" href="#"><i class="icon-question mr-2"></i>Help</a>
             </li>
             <li class="nav-item py-2 py-md-0 ml-md-3">
                 <a class="btn btn-primary btn-raised" href="#" role="button">Upgrade</a>

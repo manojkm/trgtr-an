@@ -11,58 +11,26 @@
 /* @group Base */
 .chosen-container {
   font-size: $input-font-size;
-  //position: relative;
-  //display: inline-block;
-  //vertical-align: middle;
-  //font-size: 13px;
-  //user-select: none;
-  //* {
-  //  box-sizing: border-box;
-  //}
+
   .chosen-drop {
+    @include transition;
+    @include border-color($input-focus-border-theme-color, $input-focus-border-theme-color-tone);
     animation-duration: 0.5s;
     animation-delay: 0s;
-    //position: absolute;
-    //top: 100%;
-    //z-index: 1010;
-    //width: 100%;
-    //border: 1px solid #aaa;
-    //border-top: 0;
-    //background: #fff;
-    //box-shadow: 0 4px 5px rgba(#000,.15);
-    //display: none;
-    @include transition;
     z-index: map-get($zindex, chosen-drop);
     border: $input-border-size solid;
-    @include border-color($input-focus-border-theme-color, $input-focus-border-theme-color-tone);
     border-top: 0;
     background-color: $input-bg;
-    //@include set-border-radius($input-border-radius);
     box-shadow: $chosen-select-box-shadow;
 
   }
   &.chosen-with-drop .chosen-drop {
-    //display: block;
     @include transition;
   }
-  //a{
-  //  cursor: pointer;
-  //}
 
   .search-choice, .chosen-single {
     .group-name {
-      //margin-right: 4px;
-      //overflow: hidden;
-      //white-space: nowrap;
-      //text-overflow: ellipsis;
-      //font-weight: normal;
-      //color: #999999;
       color: $input-color;
-      //&:after {
-      //  content: ":";
-      //  padding-left: 2px;
-      //  vertical-align: top;
-      //}
     }
   }
 }
@@ -72,42 +40,26 @@
 /* @group Single Chosen */
 .chosen-container-single {
   .chosen-single {
-    //position: relative;
-    //display: block;
-    //overflow: hidden;
-    //padding: 0 0 0 8px;
-    //height: 25px;
-    //border: 1px solid #aaa;
-    //border-radius: 5px;
-    //background-color: #fff;
-    //background: linear-gradient(#fff 20%, #f6f6f6 50%, #eee 52%, #f4f4f4 100%);
-    //background-clip: padding-box;
-    //box-shadow: 0 0 3px #fff inset, 0 1px 1px rgba(#000,.1);
-    //color: #444;
-    //text-decoration: none;
-    //white-space: nowrap;
-    //line-height: 24px;
-
-    @extend .form-control;
+    @include transition;
+    @include form-control-hover();
+    @include form-control-focus();
+    font-size: $input-font-size;
+    border: $input-border-size solid $input-border-color;
+    font-weight: $font-wh-normal;
+    padding: $btn-padding-y $btn-padding-x;
+    line-height: $btn-line-height;
+    background-color: $input-bg;
+    color: $input-color;
     height: $input-height;
     background-image: none;
     box-shadow: none;
 
-    //input[type="text"] {
-    //  cursor: pointer;
-    //  opacity: 0;
-    //  position: absolute;
-    //}
   }
   .chosen-default {
-    color: $input-color;
+    color: $input-color-placeholder!important;
   }
   .chosen-single span {
-    //display: block;
-    //overflow: hidden;
-    //margin-right: 26px;
-    //text-overflow: ellipsis;
-    //white-space: nowrap;
+
   }
   .chosen-single-with-deselect span {
     //margin-right: 38px;
@@ -185,7 +137,19 @@
       //line-height: normal;
       //border-radius: 0;
 
-      @extend .form-control;
+      @include transition;
+      @include set-border-radius($input-border-radius);
+      @include form-control-hover();
+      @include form-control-focus();
+      font-size: $input-font-size;
+      border: $input-border-size solid $input-border-color;
+      font-weight: $btn-font-weight;
+      padding: $btn-padding-y $btn-padding-x;
+      line-height: $btn-line-height;
+      background-color: $input-bg;
+      color: $input-color;
+
+
       background: $input-bg $chosen-search-bg no-repeat right $custom-select-padding-x center;
       background-size: $chosen-search-bg-size;
     }
@@ -507,7 +471,7 @@
   }
   .chosen-single div {
     //right: auto;
-    //left: 3px;
+    left:0;
   }
   .chosen-single abbr {
     right: auto;

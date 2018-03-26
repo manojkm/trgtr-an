@@ -60,7 +60,7 @@
     &.open > .nav-link,
     &.show > .nav-link,
     &.active > .nav-link {
-      @include background-color('header', 'light');
+      //@include background-color('header', 'light');
       @include color('header', 'active-color');
     }
   }
