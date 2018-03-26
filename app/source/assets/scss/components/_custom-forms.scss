@@ -469,6 +469,7 @@
   $ccind: custom-control-indicator;
 
   display: flex !important;
+  align-items: center;
   padding-left: 0;
 
   .#{$ccind} {

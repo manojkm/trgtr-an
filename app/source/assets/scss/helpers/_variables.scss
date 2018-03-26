@@ -168,8 +168,8 @@ $text-color: $grey-dark;
 // HEADER & NAVBAR
 //----------------------------------*/
 /* Header color variables can be found in themes/_theme-map.scss */
-$header-height: 80px;
-$navbar-font-size: $font-size-lg;
+$header-height: 70px;
+$navbar-font-size: $font-size-sm;
 $navbar-font-weight: $font-wh-semi;
 $navbar-link-height: $header-height;
 //$navbar-link-md-height: 30px;
@@ -336,7 +336,7 @@ $breadcrumb-menu-hover-color: $gray-800 !default;
 //----------------------------------*\
 // MAIN CONTENT WRAPPERS
 //----------------------------------*/
-$main-content-padding-y: 0px;
+$main-content-padding-y:40px;
 $main-content-padding-x: 0;
 
 //----------------------------------*\

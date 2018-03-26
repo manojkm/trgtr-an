@@ -51,12 +51,12 @@ $default-theme: (
                         'font-color':$pink-custom,
                 ),
                 'header': (
-                        'base': $yellow-custom,
-                        'light': lighten($yellow-custom, 6%),
-                        'dark': darken($yellow-custom, 6%),
-                        'font-color': darken($yellow-custom, 50%),
-                        'link-color': darken($yellow-custom, 50%),
-                        'hover-color': darken($yellow-custom, 100%),
+                        'base': $dark-blue-custom,
+                        'light': lighten($dark-blue-custom, 6%),
+                        'dark': darken($dark-blue-custom, 6%),
+                        'font-color': darken($white-color, 50%),
+                        'link-color': darken($white-color, 10%),
+                        'hover-color': darken($white-color, 0%),
                         'active-color': $pink-custom,
                 ),
                 'sidebar': (
