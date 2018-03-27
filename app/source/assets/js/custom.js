@@ -1189,6 +1189,17 @@ var appMaster = {
             set_heights();
         });
 
+    },
+    expand_collapse: function (){
+        $('.expand_all').on('click', function (e) {
+            e.preventDefault();
+            $('#accordion-exp-collapse').find('.multi-collapse').collapse('show');
+        });
+
+        $('.collapse_all').on('click', function (e) {
+            e.preventDefault();
+            $('#accordion-exp-collapse').find('.multi-collapse').collapse('hide');
+        });
     }
 
 
@@ -1252,6 +1263,7 @@ $(document).ready(function () {
     appMaster.max_length();
     appMaster.jquery_validation();
     appMaster.set_footer_height();
+    appMaster.expand_collapse();
 
 });
 

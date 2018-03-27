@@ -1,10 +1,6 @@
 ---
-title: "Welcome"
+title: "Search"
 ---
-
-<!--<div class="jumbotron jumbotron-fluid m-0 p-0 bg-secondary content__jumbotron"></div>-->
-
-<!-- Accurate -->
 
 <div class="container">
     <div class="row">
@@ -33,7 +29,7 @@ title: "Welcome"
                                 <input type="text" class="form-control" placeholder="eg: apple.com">
                                 <div class="input-group-append">
                                     <button type="button" class="btn btn-secondary">
-                                        <i class="icon-magnifier"></i>Search
+                                        <i class="icon-magnifier mr-1"></i>Search
                                     </button>
                                 </div>
                             </div>
@@ -133,25 +129,35 @@ title: "Welcome"
                             <span class="mr-4"><strong>36,850</strong> results</span>
                             <button type="button" class="btn btn-dark btn-sm"><i class="fas fa-download mr-2"></i>Download</button>
                         </div>
-                        <div class="col-sm text-right">
-                            One of three columns
-                        </div>
+                        <div class="col-sm text-right d-flex align-items-center justify-content-end pt-3">
+                            <a class="text-info small expand_all mr-2" href="#">Expand all</a>
+                            <a class="text-info small collapse_all" href="#">Collapse all</a>
+                            </div>
                     </div>
 
-                    <ul class="list-group mt-3" id="accordion-standard">
+                    <ul class="list-group mt-3" id="accordion-exp-collapse">
+
                         <li class="list-group-item">
+
                             <div class="row">
                                 <div class="col-sm"><a href="#" class="h6 text-info font-weight-bold">Jennie Syme</a>
                                     <p class="small"><i class="icon-briefcase mr-2"></i>Manager, Public Relations</p>
-                                    <h5>jsyme@apple.com <span class="badge badge-round empty badge-success p-1"></span></h5></div>
-                                <div class="col-sm d-flex justify-content-end align-items-end">
+                                    <h5>jsyme@apple.com <span class="badge badge-round empty badge-success p-1"></span></h5>
+                                </div>
+                                <div class="col-sm d-flex justify-content-end align-items-end flex-column">
+                                    <div class="pb-3">
+                                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                            <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add to leads"><i class="icon-plus"></i></button>
+                                            <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Validate email"><i class="icon-envelope"></i></button>
+                                        </div>
+                                    </div>
                                     <a class="accordion collapsed pl-4 text-info" data-toggle="collapse" href="#collapse1"
-                                       aria-expanded="false" role="tab">
+                                       aria-expanded="false" aria-controls="collapse1" data-parent="#accordion-exp-collapse" role="tab">
                                         3 Sources
                                     </a>
                                 </div>
                             </div>
-                            <div id="collapse1" class="collapse" role="tabpanel" data-parent="#accordion-standard">
+                            <div id="collapse1" class="collapse multi-collapse" >
                                 <div class="card card-body">
                                     <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
                                     <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
@@ -167,31 +173,35 @@ title: "Welcome"
                                     <h5>jsyme@apple.com <span class="badge badge-round empty badge-success p-1"></span></h5>
                                 </div>
                                 <div class="col-sm d-flex justify-content-end align-items-end flex-column">
-                                    <div class="mb-auto pt-3">
+                                    <div class="pb-3">
                                         <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                                             <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Add to leads"><i class="icon-plus"></i></button>
                                             <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Validate email"><i class="icon-envelope"></i></button>
                                         </div>
                                     </div>
                                     <a class="accordion collapsed pl-4 text-info" data-toggle="collapse" href="#collapse2"
-                                       aria-expanded="false" role="tab">
+                                       aria-expanded="false" aria-controls="collapse2" data-parent="#accordion-exp-collapse" role="tab">
                                         3 Sources
                                     </a>
                                 </div>
                             </div>
-                            <div id="collapse2" class="collapse" role="tabpanel" data-parent="#accordion-standard">
+                            <div id="collapse2" class="collapse multi-collapse">
                                 <div class="card card-body">
                                     <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
                                     <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
                                     <a href="#" target="_blank" class="text-info">http://www.xxxxx.com - <span class="text-muted small">May 2nd, 2017</span></a>
                                 </div>
                             </div>
-
                         </li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
                     </ul>
+
+
+                    <div class="row mt-3">
+                        <div class="col-sm"><p><strong>(10/36850)</strong></p></div>
+                        <div class="col-sm text-right"><button type="button" class="btn btn-outline-info  btn-sm ml-auto"><i class="icon-plus"></i>Load more</button></div>
+                    </div>
+
+
 
                 </div>
             </div>
@@ -199,6 +209,5 @@ title: "Welcome"
         </div>
     </div>
 </div>
-<!-- /Accurate -->
 
 
