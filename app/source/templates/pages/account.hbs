@@ -9,7 +9,138 @@ title: "Account "
                 <div class="card-header">
                     <h4 class="card-title">Account</h4>
                 </div>
-                <div class="card-body">ss</div>
+                <div class="card-body">
+
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="extended-vertical outline">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center active" href="account.html"><i class="icon-user mr-2"></i>My Account</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="subscription.html"><i class="icon-badge mr-2"></i>Subscription</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link d-flex align-items-center" href="invoice.html"><i class="icon-doc mr-2"></i>Billing & Invoice</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-9 mt-4 mt-md-0">
+
+                            <div class="d-flex mb-3">
+                                <div class="mr-auto"><h4 class="mb-0">John</h4><a href="mailto:john@gmail.com" class="text-info">john@gmail.com</a></div>
+                                <div class="mt-3">
+                                    <a class="accordion collapsed text-info" data-toggle="collapse" href="#edit-user" aria-expanded="false" aria-controls="edit-user" role="tab" ><i
+                                            class="icon-note mr-2"></i>Edit</a>
+                                </div>
+                            </div>
+                            <div id="accordion-standard" role="tablist">
+                                <div id="edit-user" class="collapse" role="tabpanel"
+                                     data-parent="#accordion-standard">
+                                    <div class="card card-body">
+                                        <form action="">
+                                            <div class="form-group">
+                                                <label for="fullName">Full Name</label>
+                                                <input class="form-control" id="fullName" placeholder="Full Name" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="company">Company</label>
+                                                <input class="form-control" id="company" placeholder="Company" type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phone">Phone</label>
+                                                <input class="form-control" id="phone" placeholder="Phone" type="text">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="address">Address</label>
+                                                <textarea class="form-control" id="address" placeholder="Address" rows="3"></textarea>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-outline-info">Cancel</button>
+                                                <button type="submit" class="btn btn-info">Save Changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="accordion-eg4" class="accordion" role="tablist">
+                                <div class="card">
+                                    <a class="h6 collapsed mb-0 card-header" data-toggle="collapse" href="#collapseOne-eg4"
+                                       aria-expanded="false" aria-controls="collapseOne-eg4" role="tab" id="headingOne-eg4">
+                                        Manage API
+                                    </a>
+
+                                    <div id="collapseOne-eg4" class="collapse" role="tabpanel"
+                                         aria-labelledby="headingOne-eg4" data-parent="#accordion-eg4">
+                                        <div class="card-body">
+
+                                            <div class="d-flex">
+                                                <div class="mr-auto p-2"><span class="badge badge-dark">API</span></div>
+                                                <div class="p-2"><code>Ed9C7cKjv9BRBj2ZE0lNNRMgwwncrYZV7s1HoQrXIVM4DFaf6V9YIJNQ74qZ</code></div>
+                                                <div class="p-2">
+                                                    <button type="button" class="btn btn-outline-dark btn-sm">re-generate</button>
+                                                </div>
+                                            </div>
+
+                                            <blockquote class="blockquote">
+                                                <footer class="blockquote-footer">Regenerating your API key will immediately invalidate your previous one. So, to minimize the amount of time in which you cannot
+                                                    communicate with the API, you should take care to coordinate this change with the ability to update the key quickly in your own application code.
+                                                </footer>
+                                            </blockquote>
+
+                                        </div>
+                                    </div>
+
+                                    <a class="h6 collapsed card-header mb-0" data-toggle="collapse" href="#collapseTwo-eg4"
+                                       aria-expanded="false" aria-controls="collapseTwo-eg4" role="tab" id="headingTwo-eg4">
+                                        Change password
+                                    </a>
+                                    <div id="collapseTwo-eg4" class="collapse" role="tabpanel" aria-labelledby="headingTwo-eg4"
+                                         data-parent="#accordion-eg4">
+                                        <div class="card-body">
+
+                                            <form action="">
+                                                <div class="form-group">
+                                                    <label for="currentPassword">Current Password</label>
+                                                    <input class="form-control" id="currentPassword" placeholder="Current Password" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="newPassword">New Password</label>
+                                                    <input class="form-control" id="newPassword" placeholder="New Password" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="confirmPassword">Confirm Password</label>
+                                                    <input class="form-control" id="confirmPassword" placeholder="Re-Type New Password" type="text">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-info">Change Password</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <a class="h6 collapsed card-header mb-0" data-toggle="collapse" href="#collapseThree-eg4"
+                                       aria-expanded="false" aria-controls="collapseThree-eg4" role="tab" id="headingThree-eg4">
+                                        Manage account
+                                    </a>
+                                    <div id="collapseThree-eg4" class="collapse" role="tabpanel"
+                                         aria-labelledby="headingThree-eg4" data-parent="#accordion-eg4">
+                                        <div class="card-body"><a class="btn btn-outline-danger btn-sm" href="#" role="button">
+                                            <i class="icon-trash mr-1"></i>Delete my Account</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
 
         </div>
