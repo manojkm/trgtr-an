@@ -3,24 +3,24 @@
   "title": "trgtr : Find the right contacts",
   "version": "1.0.0",
   "copyright": "2016",
-  "description": "Setting up a website for trgtr",
+  "description": "trgtr - application",
   "main": "index.html",
   "scripts": {
     "test": "testing"
   },
   "author": {
-    "name": "\"Cowboy\" Manoj KM",
+    "name": "Manoj KM",
     "email": "tvmmanu@gmail.com",
     "url": "xxx"
   },
   "license": "(ISC OR GPL-3.0)",
   "keywords": [
-    "twbs",
-    "assemble",
-    "grunt",
-    "less",
-    "admin",
-    "template"
+    "Find the right contacts",
+    "Professional Email Addresses",
+    "120 million+ professionals Email Addresses",
+    "Real-time Email Validation ",
+    "Affordable Professional Contacts",
+    "Generic emails addresses "
   ],
   "devDependencies": {
     "assemble": "^0.24.3",
@@ -60,21 +60,12 @@
   },
   "dependencies": {
     "animate.css": "^3.6.1",
-    "autosize": "^4.0.0",
     "bootstrap": "^4.0.0",
-    "bootstrap-datepicker": "^1.7.1",
-    "bootstrap-maxlength": "^1.6.0",
     "chosen-js": "^1.8.3",
     "dropzone": "^5.3.0",
     "install": "^0.10.4",
     "jquery": "^3.3.1",
-    "jquery-mask-plugin": "^1.14.13",
-    "jquery-steps": "^1.1.0",
     "jquery-validation": "^1.17.0",
-    "jquery.quicksearch": "^2.4.0",
-    "jquery.repeater": "^1.2.1",
-    "metismenu": "^2.7.2",
-    "multiselect": "^0.9.12",
     "nicescroll": "^3.7.4",
     "popper.js": "^1.12.9",
     "simple-line-icons": "^2.4.1"

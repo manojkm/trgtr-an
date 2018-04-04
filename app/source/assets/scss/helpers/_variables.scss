@@ -8,10 +8,6 @@
 // Author URL: http://www.themeforest.net/user/xxx
 // ================================================================================================
 
-// TODO: Fill the below comment block with proper text following robust admin theme.
-// TODO get variable namings fro https://www.bootstrap-live-customizer.com/.
-// TODO: Remove old grey-xx-xx varialbes.
-
 // ================================================================================================
 // WARNING: PLEASE DO NOT CHANGE THIS VARIABLE FILE.
 // THIS FILE WILL GET OVERWRITTEN WITH EACH XXXX TEMPLATE RELEASE.
@@ -501,7 +497,7 @@ $input-border-size: $border-thin;
 
 $input-focus-color: $gray-700;
 //$input-focus-border-color: $gray-500;
-$input-focus-border-theme-color: primary !default;
+$input-focus-border-theme-color: secondary !default;
 $input-focus-border-theme-color-tone: base !default;
 
 $input-hover-border-color: $gray-500;
@@ -1076,7 +1072,7 @@ $tooltip-line-height: 1.25 !default;
 //----------------------------------*\
 // FOOTER
 //----------------------------------*/
-$footer-min-height:50px;
+$footer-min-height:30px;
 $footer-font-size: $font-size-sm;
 $footer-font-weight: $font-wh-normal;
 

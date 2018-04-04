@@ -44,9 +44,11 @@
     flex-direction: row;
 
     @include max-screen($screen-md-max) {
+      flex-direction: column;
+
       @if bool($navbar-item-mobile-bottom-border) == true {
         @include border-bottom-color('header', 'light');
-        border-bottom: 1px solid ;
+        border-bottom: 1px solid;
       } @else {
         border-bottom: 0
       }

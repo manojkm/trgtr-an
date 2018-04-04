@@ -726,10 +726,6 @@ autoprefixer-core@^5.1.7:
     num2fraction "^1.1.0"
     postcss "~4.1.12"
 
-autosize@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/autosize/-/autosize-4.0.0.tgz#7a0599b1ba84d73bd7589b0d9da3870152c69237"
-
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -1202,16 +1198,6 @@ boom@5.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
   dependencies:
     hoek "4.x.x"
-
-bootstrap-datepicker@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz#4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf"
-  dependencies:
-    jquery ">=1.7.1 <4.0.0"
-
-bootstrap-maxlength@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/bootstrap-maxlength/-/bootstrap-maxlength-1.6.0.tgz#03f35f07338009efeafddacd6d0c6bccc2da7ee1"
 
 bootstrap@^4.0.0:
   version "4.0.0"
@@ -4594,31 +4580,13 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery-mask-plugin@^1.14.13:
-  version "1.14.13"
-  resolved "https://registry.yarnpkg.com/jquery-mask-plugin/-/jquery-mask-plugin-1.14.13.tgz#a80368d3b1d1402e4d6963a8ae7797c49bc21fc6"
-
-jquery-steps@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/jquery-steps/-/jquery-steps-1.1.0.tgz#0ceee0b0d2e49143981ad120d458ed56ea8e1924"
-
 jquery-validation@^1.17.0:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.17.0.tgz#ab66b6b583d7740b9bbd148993e50e8ac041f35b"
   dependencies:
     jquery "^1.7 || ^2.0 || ^3.1"
 
-jquery.quicksearch@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/jquery.quicksearch/-/jquery.quicksearch-2.4.0.tgz#240c9f435e936c63bf8fbba355144ffdddf9ea26"
-  dependencies:
-    jquery ">=1.8"
-
-jquery.repeater@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/jquery.repeater/-/jquery.repeater-1.2.1.tgz#ea284a69374bf4478dc2e60af5e705b169cb1514"
-
-"jquery@>= 1.7.1", "jquery@>=1.7.1 <4.0.0", jquery@>=1.8, jquery@>=1.8.3, "jquery@^1.7 || ^2.0 || ^3.1", jquery@^3.3.1:
+jquery@>=1.8.3, "jquery@^1.7 || ^2.0 || ^3.1", jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -5402,10 +5370,6 @@ merge-value@^1.0.0:
     mixin-deep "^1.2.0"
     set-value "^2.0.0"
 
-metismenu@^2.7.2:
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/metismenu/-/metismenu-2.7.2.tgz#82495746b0591aaa10aeef3c149c59c3ca02d219"
-
 micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.10, micromatch@^2.3.11, micromatch@^2.3.7, micromatch@^2.3.8:
   version "2.3.11"
   resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-2.3.11.tgz#86677c97d1720b363431d04d0d15293bd38c1565"
@@ -5554,12 +5518,6 @@ multipipe@^0.1.2:
   resolved "https://registry.yarnpkg.com/multipipe/-/multipipe-0.1.2.tgz#2a8f2ddf70eed564dff2d57f1e1a137d9f05078b"
   dependencies:
     duplexer2 "0.0.2"
-
-multiselect@^0.9.12:
-  version "0.9.12"
-  resolved "https://registry.yarnpkg.com/multiselect/-/multiselect-0.9.12.tgz#d15536e986dd6a0029b160d6613bcedf81e4c7ed"
-  dependencies:
-    jquery ">= 1.7.1"
 
 mute-stream@0.0.5:
   version "0.0.5"

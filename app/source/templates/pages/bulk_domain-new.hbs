@@ -51,7 +51,7 @@ title: "New Bulk Search"
                                         </div>
 
                                     </div>
-                                    <div class="col-md-2 text-center"> <h5><span class="badge badge-round badge-dark mt-3 p-3">OR</span></h5></div>
+                                    <div class="col-md-2 text-center"><h5><span class="badge badge-round badge-dark mt-3 p-3">OR</span></h5></div>
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label for="uploadFile">Create by Uploading file</label>
@@ -59,13 +59,15 @@ title: "New Bulk Search"
                                                 <input class="custom-file-input" id="customFile" type="file">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
+                                            <div class="dropzone mt-3" data-plugin="dropzone" id="myDropzone">
+                                                <div class="fallback">
+                                                    <input name="file" type="file" multiple/>
+                                                </div>
+                                            </div>
                                             <small id="uploadFileHelpBlock" class="form-text text-muted">
                                                 chose .csv or .txt file with domain names.
                                             </small>
-
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
