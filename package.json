@@ -18,9 +18,9 @@
     "Find the right contacts",
     "Professional Email Addresses",
     "120 million+ professionals Email Addresses",
-    "Real-time Email Validation ",
+    "Real-time Email Validation",
     "Affordable Professional Contacts",
-    "Generic emails addresses "
+    "Generic emails addresses"
   ],
   "devDependencies": {
     "assemble": "^0.24.3",
