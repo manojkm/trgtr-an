@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "animate.css": "^3.6.1",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bootstrap": "^4.0.0",
     "chosen-js": "^1.8.3",
     "dropzone": "^5.3.0",
